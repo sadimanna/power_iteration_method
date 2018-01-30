@@ -36,6 +36,6 @@ def get_shifted_eigvec(A,s,eigval):
 	#apply shift
 	Atemp = A - s*I
 	niter = 200000
-	v, _ = inv_power_iter(Atemp,niter)
-	return v
+	v, l = inv_power_iter(Atemp,niter)
+	return v, l
 
