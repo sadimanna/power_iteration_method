@@ -7,7 +7,7 @@ def power_iteration(A, niter):
 	Ashape = A.get_shape()
         eigvec = np.random.rand(Ashape[0])
 	eigval_old = np.dot(np.transpose(eigvec),A.dot(eigvec))/np.dot(np.transpose(eigvec),eigvec)        
-	for i in range(num_simulations):
+	for i in range(niter):
         	# calculate the matrix-by-vector product Ab
         	eigvec1 = A.dot(eigvec)
         	# calculate the norm
